@@ -18,7 +18,7 @@ interface GetLessonsQueryResoibse {
     lessons: {
         id: string;
         title: string;
-        slung: string;
+        slug: string;
         availableAt: string;
         lessonType: 'live' | 'class'
     }[]
@@ -43,7 +43,7 @@ export function Sidebar() {
                         <Lesson
                         key={lesson.id}
                         title={lesson.title}
-                        slug={lesson.slung}
+                        slug={lesson.slug}
                         availableAt={new Date(lesson.availableAt)}
                         type={lesson.lessonType}
                     />
